@@ -40,23 +40,6 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      - name: WakaTime (languages / editors / os -- projects section omitted)
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: NOT_NEEDED
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          user: raxjinn
-          filename: charts/wakatime.svg
-          base: ""
-          config_timezone: America/Phoenix
-          extras_css: ${{ env.THEME_CSS }}
-          optimize: xml
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
-          plugin_wakatime_url: https://wakatime.com
-          plugin_wakatime_days: 7
-          plugin_wakatime_sections: time, languages, languages-graphs, editors, os
-
   cards:
     # Serialized behind metrics: both jobs commit to master, and in parallel they
     # race each other's push. The snake job targets the output branch, so it is free.
@@ -67,6 +50,8 @@ jobs:
       - run: python .github/scripts/render.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The Actions token cannot read a user's contribution collection.
+          GRAPHQL_TOKEN: ${{ secrets.METRICS_TOKEN }}
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"

@@ -17,7 +17,7 @@
 </tr>
 <tr>
 <td width="50%" valign="top">
-<img src="./charts/wakatime.svg" alt="Time by language, editor and platform this week" width="100%" />
+<img src="./charts/streak.svg" alt="Contribution totals, streaks and weekly trend" width="100%" />
 </td>
 <td width="50%" valign="top">
 <img src="./charts/guestbook.svg" alt="Visitor guestbook" width="100%" />
