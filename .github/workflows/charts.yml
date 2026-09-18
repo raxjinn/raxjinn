@@ -16,6 +16,11 @@ env:
     .field, .value, text, span, div { color: #e6e1ff !important; }
     .gray, .subtitle { color: #7d6f9c !important; }
     svg .bar, svg rect.bar { filter: drop-shadow(0 0 3px rgba(246,1,157,.7)); }
+    [fill="#ebedf0"] { fill: #1a1033 !important; }
+    [fill="#9be9a8"] { fill: #4a1f7a !important; }
+    [fill="#40c463"] { fill: #791e94 !important; }
+    [fill="#30a14e"] { fill: #f6019d !important; }
+    [fill="#216e39"] { fill: #2de2e6 !important; }
 
 jobs:
   metrics:
@@ -33,23 +38,6 @@ jobs:
           extras_css: ${{ env.THEME_CSS }}
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-
-      - name: Habits (time-of-day, indent style)
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          user: raxjinn
-          filename: charts/habits.svg
-          base: ""
-          config_timezone: America/Phoenix
-          extras_css: ${{ env.THEME_CSS }}
-          plugin_habits: yes
-          plugin_habits_from: 200
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
 
       - name: WakaTime (languages / editors / os -- projects section omitted)
         uses: lowlighter/metrics@v3.34

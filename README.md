@@ -27,15 +27,6 @@
 </td>
 <td width="50%" valign="top">
 
-### ◤ WHEN I SHIP
-
-<img src="./charts/habits.svg" alt="Coding habits" width="100%" />
-
-</td>
-</tr>
-<tr>
-<td colspan="2" valign="top">
-
 ### ◤ THE LAST YEAR
 
 <img src="./charts/calendar.svg" alt="Contribution calendar" width="100%" />
