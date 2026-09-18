@@ -57,6 +57,26 @@ jobs:
           plugin_wakatime_days: 7
           plugin_wakatime_sections: time, languages, languages-graphs, editors, os
 
+  cards:
+    # Serialized behind metrics: both jobs commit to master, and in parallel they
+    # race each other's push. The snake job targets the output branch, so it is free.
+    needs: metrics
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python .github/scripts/render.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add charts/
+          if git diff --quiet --cached; then echo "no card changes"; exit 0; fi
+          git commit -m "chore: refresh animated cards"
+          git pull --rebase --autostash origin master
+          git push
+
   snake:
     runs-on: ubuntu-latest
     steps:

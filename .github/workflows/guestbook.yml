@@ -1,0 +1,35 @@
+name: guestbook
+
+# Redraws the guestbook card when signatures are approved. The render only picks
+# up issues carrying the `approved` label, so a stranger opening an issue puts
+# nothing on the profile until the label is applied by hand.
+on:
+  issues:
+    types: [labeled, unlabeled, edited, deleted, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guestbook
+  cancel-in-progress: false
+
+jobs:
+  render:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'approved' || contains(join(github.event.issue.labels.*.name, ','), 'approved')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python .github/scripts/render.py guestbook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit guestbook
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add charts/guestbook.svg
+          if git diff --quiet --cached; then echo "no guestbook changes"; exit 0; fi
+          git commit -m "chore: refresh guestbook"
+          git pull --rebase --autostash origin master
+          git push

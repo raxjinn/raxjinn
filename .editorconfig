@@ -1,0 +1,20 @@
+# Created automatically because this repo had no .editorconfig.
+# Tune it — these are conservative defaults, not a house style.
+#
+# `end_of_line` and `charset` are intentionally omitted: declaring them makes
+# every CRLF or BOM file in an existing tree fail a format gate at once.
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{json,jsonc,yml,yaml}]
+indent_size = 2
+
+# Two trailing spaces is a hard line break in Markdown.
+[*.md]
+trim_trailing_whitespace = false

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="210" viewBox="0 0 860 210" role="img" aria-label="evan: healthcare interoperability, agentic tooling, data plumbing that holds">
+<defs>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#791e94"/><stop offset=".5" stop-color="#f6019d"/>
+    <stop offset="1" stop-color="#2de2e6"/>
+  </linearGradient>
+  <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#791e94" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#f6019d"/>
+    <stop offset="1" stop-color="#2de2e6" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#ffffff" opacity=".035"/>
+  </pattern>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <linearGradient id="word" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2de2e6"/><stop offset=".55" stop-color="#f6019d"/>
+    <stop offset="1" stop-color="#ff3864"/>
+  </linearGradient>
+  <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+    <path d="M34 0H0v34" fill="none" stroke="#791e94" stroke-opacity=".22"/>
+  </pattern>
+  <filter id="bloom" x="-25%" y="-25%" width="150%" height="150%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="w0"><rect id="m0" x="24" y="135" width="0" height="23"/></clipPath>
+  <clipPath id="w1"><rect id="m1" x="24" y="135" width="0" height="23"/></clipPath>
+  <clipPath id="w2"><rect id="m2" x="24" y="135" width="0" height="23"/></clipPath>
+</defs>
+<style>
+  @keyframes bl { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+  @keyframes sweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+  @keyframes pulse { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+  @keyframes drift { 0% { transform: translateY(0); } 100% { transform: translateY(-34px); } }
+  @keyframes drawin { 0% { stroke-dashoffset: 60; } 100% { stroke-dashoffset: 0; } }
+  #shine { animation: sweep 7s linear infinite; }
+  #halo { animation: pulse 4s ease-in-out infinite; }
+  #mesh { animation: drift 8s linear infinite; }
+  .tick { stroke-dasharray: 60; animation: drawin 1.4s ease-out both; }
+  [id^="c"] { animation: bl 1s steps(1) infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    #shine, #halo, #mesh, .tick { animation: none; }
+    #halo { opacity: .7; }
+    .tick { stroke-dashoffset: 0; }
+    #m0 { animation: none; width: 252.9px; }
+    #c0 { animation: none; width: 0px; }
+    #m1, #c1, #m2, #c2 { animation: none; width: 0px; }
+  }
+    #m0 { animation: type0 12.0s steps(27) infinite; }
+    #c0 { animation: run0 12.0s steps(27) infinite; }
+    @keyframes type0 {
+      0%,0.001% { width: 0px; }
+      15.000%,33.331% { width: 252.9px; }
+      33.332%,100% { width: 0px; }
+    }
+    @keyframes run0 {
+      0%,0.001% { x: 24px; width: 0px; }
+      0.002% { x: 24px; width: 9.4px; }
+      15.000%,33.331% { x: 279.9px; width: 9.4px; }
+      33.332%,100% { x: 279.9px; width: 0px; }
+    }
+    #m1 { animation: type1 12.0s steps(15) infinite; }
+    #c1 { animation: run1 12.0s steps(15) infinite; }
+    @keyframes type1 {
+      0%,33.334% { width: 0px; }
+      48.333%,66.665% { width: 140.5px; }
+      66.666%,100% { width: 0px; }
+    }
+    @keyframes run1 {
+      0%,33.334% { x: 24px; width: 0px; }
+      33.335% { x: 24px; width: 9.4px; }
+      48.333%,66.665% { x: 167.5px; width: 9.4px; }
+      66.666%,100% { x: 167.5px; width: 0px; }
+    }
+    #m2 { animation: type2 12.0s steps(24) infinite; }
+    #c2 { animation: run2 12.0s steps(24) infinite; }
+    @keyframes type2 {
+      0%,66.668% { width: 0px; }
+      81.667%,99.998% { width: 224.8px; }
+      99.999%,100% { width: 0px; }
+    }
+    @keyframes run2 {
+      0%,66.668% { x: 24px; width: 0px; }
+      66.669% { x: 24px; width: 9.4px; }
+      81.667%,99.998% { x: 251.8px; width: 9.4px; }
+      99.999%,100% { x: 251.8px; width: 0px; }
+    }
+</style>
+<rect width="860" height="210" rx="14" fill="#0d0221"/>
+<g clip-path="inset(0 round 14px)">
+  <rect id="mesh" x="0" y="0" width="860" height="244" fill="url(#grid)"/>
+  <rect id="shine" x="-860" width="860" height="210" fill="url(#rule)" opacity=".18"/>
+</g>
+<rect width="860" height="210" rx="14" fill="url(#scan)"/>
+<text id="halo" x="24" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="76" font-weight="700"
+      fill="url(#word)" filter="url(#bloom)" letter-spacing="-2">evan</text>
+<text x="24" y="104" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="76" font-weight="700"
+      fill="url(#word)" letter-spacing="-2">evan</text>
+<text x="24" y="152" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="17" fill="#2de2e6" clip-path="url(#w0)">healthcare interoperability</text><rect id="c0" x="24" y="138" width="0" height="17" fill="#f6019d"/>
+<text x="24" y="152" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="17" fill="#2de2e6" clip-path="url(#w1)">agentic tooling</text><rect id="c1" x="24" y="138" width="0" height="17" fill="#f6019d"/>
+<text x="24" y="152" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="17" fill="#2de2e6" clip-path="url(#w2)">data plumbing that holds</text><rect id="c2" x="24" y="138" width="0" height="17" fill="#f6019d"/>
+<rect x="24" y="176" width="812" height="2" fill="url(#rule)"/>
+<path class="tick" d="M12 44V16h28" fill="none" stroke="#2de2e6" stroke-opacity=".6" stroke-width="2"/>
+<path class="tick" d="M848 166v28h-28" fill="none" stroke="#f6019d" stroke-opacity=".6" stroke-width="2"/>
+<rect x="1" y="1" width="858" height="208" rx="13" fill="none" stroke="#791e94" stroke-opacity=".55"/>
+</svg>

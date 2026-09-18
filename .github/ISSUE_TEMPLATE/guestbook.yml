@@ -1,0 +1,20 @@
+name: Sign the guestbook
+description: Leave a short note on the profile wall
+title: "your note here (this line is what appears on the card)"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Put your note in the title above** — that is the line the card renders,
+        and roughly the first 60 characters fit.
+
+        Notes appear on the profile only after they are approved, so nothing
+        shows up the moment you submit.
+  - type: textarea
+    id: anything
+    attributes:
+      label: Anything else (optional)
+      description: Not rendered on the card. Say hello, ask something, whatever.
+    validations:
+      required: false
