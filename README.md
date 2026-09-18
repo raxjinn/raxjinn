@@ -22,7 +22,7 @@
 
 ### ◤ WHAT I REACH FOR
 
-<img src="./charts/langs.svg" alt="Language distribution" width="100%" />
+<img src="./charts/wakatime.svg" alt="Time by language, editor and platform this week" width="100%" />
 
 </td>
 <td width="50%" valign="top">
@@ -34,14 +34,7 @@
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-
-### ◤ THIS WEEK
-
-<img src="./charts/wakatime.svg" alt="Time tracked this week" width="100%" />
-
-</td>
-<td width="50%" valign="top">
+<td colspan="2" valign="top">
 
 ### ◤ THE LAST YEAR
 
@@ -61,6 +54,6 @@
 **Agent infrastructure** — multi-agent build systems, eval harnesses, tooling that survives contact with production
 **Finance primitives** — ledgers, reconciliation, the parts where "close enough" is not a number
 
-<sub>Charts aggregate public and private activity. Totals and percentages only — no repository names, organizations, commit messages, or client detail is published. Regenerated daily by <a href="./.github/workflows/charts.yml"><code>charts.yml</code></a>.</sub>
+<sub>The GitHub token behind these charts carries no scopes, so it cannot read a private repository at all — private work appears only as contribution counts. Language and editor time comes from local editor tracking with project names excluded. No repository names, organizations, commit messages, or client detail is published. Regenerated daily by <a href="./.github/workflows/charts.yml"><code>charts.yml</code></a>.</sub>
 
 </div>

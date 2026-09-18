@@ -21,24 +21,6 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - name: Languages (aggregate only, no repo names)
-        uses: lowlighter/metrics@v3.34
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          committer_token: ${{ secrets.GITHUB_TOKEN }}   # never the PAT: PAT pushes retrigger this workflow
-          user: raxjinn
-          filename: charts/langs.svg
-          base: ""
-          config_timezone: America/Phoenix
-          extras_css: ${{ env.THEME_CSS }}
-          repositories_affiliations: owner, collaborator, organization_member
-          plugin_languages: yes
-          plugin_languages_details: percentage
-          plugin_languages_limit: 8
-          plugin_languages_sections: most-used
-          plugin_languages_ignored: html, css, scss, tex, makefile, dockerfile, shell, batchfile, powershell
-          plugin_languages_colors: "0:f6019d, 1:2de2e6, 2:ff3864, 3:791e94, 4:ffd319, 5:9d4edd, 6:00f5d4, 7:ff6b9d"
-
       - name: Contribution isocalendar
         uses: lowlighter/metrics@v3.34
         with:
