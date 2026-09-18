@@ -36,6 +36,7 @@ jobs:
           base: ""
           config_timezone: America/Phoenix
           extras_css: ${{ env.THEME_CSS }}
+          optimize: xml
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
@@ -49,6 +50,7 @@ jobs:
           base: ""
           config_timezone: America/Phoenix
           extras_css: ${{ env.THEME_CSS }}
+          optimize: xml
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_TOKEN }}
           plugin_wakatime_url: https://wakatime.com
