@@ -7,7 +7,12 @@
 h2 { color: #2de2e6 !important; text-shadow: 0 0 6px rgba(45,226,230,.55); letter-spacing: .04em; }
 .field, .value, text, span, div { color: #e6e1ff !important; }
 .gray, .subtitle { color: #7d6f9c !important; }
-svg .bar, svg rect.bar { filter: drop-shadow(0 0 3px rgba(246,1,157,.7)); }</style>
+svg .bar, svg rect.bar { filter: drop-shadow(0 0 3px rgba(246,1,157,.7)); }
+[fill="#ebedf0"] { fill: #1a1033 !important; }
+[fill="#9be9a8"] { fill: #4a1f7a !important; }
+[fill="#40c463"] { fill: #791e94 !important; }
+[fill="#30a14e"] { fill: #f6019d !important; }
+[fill="#216e39"] { fill: #2de2e6 !important; }</style>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
             <section>
