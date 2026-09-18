@@ -45,6 +45,4 @@
 **Agent infrastructure** — multi-agent build systems, eval harnesses, tooling that survives contact with production
 **Finance primitives** — ledgers, reconciliation, the parts where "close enough" is not a number
 
-<sub>The GitHub token behind these charts carries no scopes, so it cannot read a private repository at all — private work appears only as contribution counts. Language and editor time comes from local editor tracking with project names excluded. No repository names, organizations, commit messages, or client detail is published. Regenerated daily by <a href="./.github/workflows/charts.yml"><code>charts.yml</code></a>.</sub>
-
 </div>
